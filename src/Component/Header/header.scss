@@ -1,0 +1,131 @@
+.topbar{
+    background-color: dimgrey;
+}
+.topbar_contact_details{
+    display: flex;
+    padding-top: 10px;
+    color: #fff;
+
+    img{
+        width: 17px;
+        margin: 0 8px;
+    }
+    a{
+        color: #fff;
+        text-decoration: none;
+    }
+}
+.navibar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.navbar-toggler-icon{
+    background-image: url(https://cdn-icons-png.flaticon.com/512/1828/1828724.png);
+}
+#offcanvasNavbar-expand-lg {
+    background: aliceblue;
+}
+.navbar-toggler:hover {
+    text-decoration: none;
+    padding: 0 0;
+    margin-right: 10px;
+}
+button.navbar-toggler.collapsed {
+    padding: 3px;
+    margin-right: 10px;
+    border: 1px solid transparent;
+    border: transparent;
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+.header{
+    background: aliceblue;
+    // height: 60px;
+    transition: 0.3s ease;
+    .container{
+        padding: 0 5px;
+    }
+}
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.trin-trin {
+    animation-name: trin;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.trin-trin {
+    animation-name: trin;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.dropdown-menu{
+    background: #00000085;
+    color: #fff;
+    transition: 0.3s ease;
+    border: transparent;
+    padding-left: 10px;
+}
+.dropdown-item:hover {
+    /* background: #000; */
+    color: #000 !important;
+    &:active{
+        background: transparent;
+        color: #000;
+    }
+}
+.dropdown-item {
+    color: #fff !important;
+}
+@keyframes trin {
+
+    from {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+
+    20%,
+    32%,
+    44%,
+    56%,
+    68% {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+
+    23%,
+    35%,
+    47%,
+    59%,
+    71% {
+        transform: rotate3d(0, 0, 1, 15deg);
+    }
+
+    26%,
+    38%,
+    50%,
+    62%,
+    74% {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+
+    29%,
+    41%,
+    53%,
+    65%,
+    77% {
+        transform: rotate3d(0, 0, 1, -15deg);
+    }
+
+    80% {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+
+}
