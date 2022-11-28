@@ -15,9 +15,13 @@
         text-decoration: none;
     }
 }
-.nav-link {
-    margin: 0 6px;
+.navbar-nav{
+    .nav-link {
+            margin: 0 10px;
+    }
+
 }
+
 .navibar {
     display: flex;
     align-items: center;
@@ -45,17 +49,21 @@ button.navbar-toggler.collapsed {
     box-shadow: none;
 }
 .header{
-    background: aliceblue;
+    background: #fbb517;
     // height: 60px;
     transition: 0.3s ease;
     .container{
         padding: 0 5px;
     }
 }
+a.nav-link.active{
+    font-weight: 600;
+}
 .fixed-header {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 9;
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -70,6 +78,15 @@ button.navbar-toggler.collapsed {
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+}
+.dropdown-menu{
+    padding: 0;
+}
+.bg-navibar{
+    padding: 5px 0;
+}
+.bg-navibar a:hover{
+    color: #000;
 }
 // .dropdown-menu{
 //     background: #00000085;
