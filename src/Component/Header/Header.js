@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./header.scss";
 // import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
@@ -9,9 +9,23 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import PhoneIcon from "../../Assets/img/icon-call-white.png";
 import { NavLink } from "react-router-dom";
+import { Button } from "react-bootstrap";
 // import { containerClasses } from "@mui/system";
 
 const Header = () => {
+  const [mode, setmode] = useState("navibar");
+
+  const toggleMode = () => {
+    if (mode === "navibar") {
+      setmode("dark");
+      const myElement = document.getElementsByClassName("header");
+      myElement.style.backgroundColor = "black";
+      const dropdowns = document.getElementsByClassName("show");
+      dropdowns.style.backgroundColor = "black";
+    } else {
+      setmode("navibar");
+    }
+  };
   return (
     <>
       <div className="topbar">
@@ -26,9 +40,13 @@ const Header = () => {
         </Container>
       </div>
       {["lg"].map((expand, index) => (
-        <div key={index} className="header">
+        <div key={index} className={`header bg-${mode}`}>
           <Container>
-            <Navbar sticky="top" expand={expand} className="sticky-top">
+            <Navbar
+              sticky="top"
+              expand={expand}
+              className={`sticky-top navbar-${mode}`}
+            >
               <div className="navibar">
                 <Navbar.Brand href="#">
                   <img
@@ -67,21 +85,23 @@ const Header = () => {
                         title="More Info"
                         id={`offcanvasNavbarDropdown-expand-${expand}`}
                       >
-                        <NavDropdown.Item className="nav-link">
-                          <NavLink to="Career" className="nav-link">
-                            Career
-                          </NavLink>
-                        </NavDropdown.Item>
-                        <NavDropdown.Item className="nav-link">
-                          <NavLink to="Blogs" className="nav-link">
-                            Blogs
-                          </NavLink>
-                        </NavDropdown.Item>
-                        <NavDropdown.Item className="nav-link">
-                          <NavLink to="Blogs" className="nav-link">
-                            Something else here
-                          </NavLink>
-                        </NavDropdown.Item>
+                        <div className={`bg-${mode}`}>
+                          <NavDropdown.Item>
+                            <NavLink to="Career" className="nav-link">
+                              Career
+                            </NavLink>
+                          </NavDropdown.Item>
+                          <NavDropdown.Item>
+                            <NavLink to="Blogs" className="nav-link">
+                              Blogs
+                            </NavLink>
+                          </NavDropdown.Item>
+                          <NavDropdown.Item>
+                            <NavLink to="Blogs" className="nav-link">
+                              Something else here
+                            </NavLink>
+                          </NavDropdown.Item>
+                        </div>
                       </NavDropdown>
                       <NavLink to="Contact" className="nav-link">
                         Contact
@@ -96,6 +116,7 @@ const Header = () => {
                       />
                       <Button variant="outline-success">Search</Button>
                     </Form> */}
+                    <Button onClick={toggleMode}>dark mode</Button>
                   </Offcanvas.Body>
                 </Navbar.Offcanvas>
               </div>

@@ -1,0 +1,32 @@
+.product-slider{
+    padding: 70px 0;
+    button.slick-arrow.slick-prev {
+            background-image: url(https://www.lays.com/sites/lays.com/themes/lays/img/left-arrow.svg?v4);
+            width: 50px;
+            height: 50px;
+            /* background: #fff; */
+            z-index: 8;
+            background-position: center;
+            background-size: cover;
+        }
+
+        button.slick-arrow.slick-next {
+            background-image: url(https://www.lays.com/sites/lays.com/themes/lays/img/right-arrow.svg?v4);
+            width: 50px;
+            height: 50px;
+            /* background: #fff; */
+            z-index: 8;
+            background-position: center;
+            background-size: cover;
+        }
+}
+
+.slick-prev{
+    left: -10px !important;
+}
+.slick-next {
+    right: -10px !important;
+}
+.slick-prev:before, .slick-next:before {
+    content: '';
+}
