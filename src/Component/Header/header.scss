@@ -15,6 +15,9 @@
         text-decoration: none;
     }
 }
+.nav-link {
+    margin: 0 6px;
+}
 .navibar {
     display: flex;
     align-items: center;
@@ -68,13 +71,13 @@ button.navbar-toggler.collapsed {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
-.dropdown-menu{
-    background: #00000085;
-    color: #fff;
-    transition: 0.3s ease;
-    border: transparent;
-    padding-left: 10px;
-}
+// .dropdown-menu{
+//     background: #00000085;
+//     color: #fff;
+//     transition: 0.3s ease;
+//     border: transparent;
+//     padding-left: 10px;
+// }
 .dropdown-item:hover {
     /* background: #000; */
     color: #000 !important;
