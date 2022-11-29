@@ -3,6 +3,7 @@ import "./home.scss";
 import BannerSlider from "../BannerSlider/BannerSlider";
 import TextUtils from "../TextUtils/TextUtils";
 import Alerts from "../Alerts/Alerts";
+import Greet from "../Greet/Greet";
 // import ProductSlider from "../ProductSlider/ProductSlider";
 
 const Home = () => {
@@ -20,6 +21,15 @@ const Home = () => {
         upercase="convert into uppercase"
         subheading="some ui heading for heading"
       />
+      <Greet name="harish" role="ui developer">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+          expedita ducimus odio mollitia quas dolorem animi, quam consequuntur
+          harum adipisci?
+        </p>
+      </Greet>
+      <Greet name="mahesh" role="ui designer" />
+      <Greet name="dinesh" role="digital marketing" />
       <Alerts />
     </div>
   );
