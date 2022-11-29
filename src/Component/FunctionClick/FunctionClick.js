@@ -1,13 +1,20 @@
-import React from "react";
-import { Button } from "react-bootstrap";
+import React, { useState } from "react";
+import Child from "../Child/Child";
+// import { Button } from "react-bootstrap";
 
 const FunctionClick = () => {
-  function FunctionClicked() {
-    console.log("FunctionClicked");
+  const [state] = useState("Greet");
+  const parentName = "Guest";
+
+  function greetParent(child) {
+    alert(`hello ${parentName} from ${child}`);
   }
   return (
     <div>
-      <Button onClick={FunctionClicked}>FunctionClick</Button>
+      <div>
+        <h2>{state} </h2>
+      </div>
+      <Child greetHandler={greetParent} />
     </div>
   );
 };

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Button, Container } from "react-bootstrap";
 
-const Greet = ({ name, role }) => {
+const Greet = (props) => {
+  const { name, role } = props;
   const [state, setState] = useState("Please Click on Login Button");
   const [count, setCount] = useState(0);
   //   const { name, role } =  ;
@@ -20,7 +21,6 @@ const Greet = ({ name, role }) => {
     <div>
       <Container>
         <h2>{state}</h2>
-
         <button className="btn btn-primary" onClick={massesgeChange}>
           Login
         </button>
