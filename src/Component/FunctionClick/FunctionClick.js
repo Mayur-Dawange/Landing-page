@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Container } from "react-bootstrap";
 import Child from "../Child/Child";
 // import { Button } from "react-bootstrap";
 
@@ -11,10 +12,12 @@ const FunctionClick = () => {
   }
   return (
     <div>
-      <div>
-        <h2>{state} </h2>
-      </div>
-      <Child greetHandler={greetParent} />
+      <Container>
+        <div>
+          <h2>{state} </h2>
+        </div>
+        <Child greetHandler={greetParent} />
+      </Container>
     </div>
   );
 };
