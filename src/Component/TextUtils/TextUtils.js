@@ -1,5 +1,6 @@
 import { React, useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import "./textutils.scss";
 
 const TextUtils = (props) => {
@@ -25,6 +26,10 @@ const TextUtils = (props) => {
   const handleOnChange = (e) => {
     // console.log("on change");
     setText(e.target.value);
+  };
+  const Navigate = useNavigate();
+  const goContact = () => {
+    Navigate("/contact");
   };
   return (
     <>
@@ -61,6 +66,8 @@ const TextUtils = (props) => {
           </div>
           <h3>{props.preview}</h3>
           <p>{text}</p>
+
+          <Button onClick={() => goContact()}>Contact</Button>
         </Container>
       </div>
     </>

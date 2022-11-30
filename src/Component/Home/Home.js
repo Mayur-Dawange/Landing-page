@@ -2,9 +2,14 @@ import React from "react";
 import "./home.scss";
 import BannerSlider from "../BannerSlider/BannerSlider";
 import TextUtils from "../TextUtils/TextUtils";
-import FunctionClick from "../FunctionClick/FunctionClick";
-import Greet from "../Greet/Greet";
-import ListItem from "../ListItem/ListItem";
+// import FunctionClick from "../FunctionClick/FunctionClick";
+// import Greet from "../Greet/Greet";
+// import ListItem from "../ListItem/ListItem";
+// import AlertDismissible from "../Alerts/Alerts";
+import UseStateObject from "../UseStateObject/UseStateObject";
+import UseEffect from "../UseEffect/UseEffect";
+// import { Button } from "react-bootstrap";
+// import { useNavigate } from "react-router-dom";
 // import ConditionRendering from "../ConditionRendering/ConditionRendering";
 // import Alerts from "../Alerts/Alerts";
 // import Greet from "../Greet/Greet";
@@ -16,7 +21,6 @@ const Home = () => {
     <div className="home-hero">
       <BannerSlider />
       {/* <ProductSlider /> */}
-
       <TextUtils
         preview="Preiview"
         // time="new Date()"
@@ -26,13 +30,18 @@ const Home = () => {
         upercase="convert into uppercase"
         subheading="some ui heading for heading"
       />
-      <Greet name="mahesh" role="ui designer" />
-      <ListItem />
+
+      {/* <Greet name="mahesh" role="ui designer" /> */}
+      {/* <ListItem /> */}
       {/* <Greet name="mahesh" role="ui designer" />
       <Alerts />
       */}
       {/* <ConditionRendering /> */}
-      <FunctionClick />
+      {/* <AlertDismissible alert={alert} /> */}
+      {/* <FunctionClick /> */}
+
+      <UseStateObject />
+      <UseEffect />
     </div>
   );
 };
