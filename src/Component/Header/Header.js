@@ -22,6 +22,7 @@ const Header = () => {
       myElement.style.backgroundColor = "black";
       const dropdowns = document.getElementsByClassName("show");
       dropdowns.style.backgroundColor = "black";
+      // toggleMode("mode has been enabel");
     } else {
       setmode("navibar");
     }

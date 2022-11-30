@@ -1,5 +1,6 @@
 import { React, useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const TextUtils2 = () => {
   const [text, textState] = useState("Enter your text here");
@@ -11,6 +12,11 @@ const TextUtils2 = () => {
   const uppercase = () => {
     let newtext = text.toLocaleUpperCase();
     textState(newtext);
+  };
+
+  const Home = useNavigate();
+  const goHome = () => {
+    Home("/");
   };
 
   return (
@@ -28,6 +34,10 @@ const TextUtils2 = () => {
             />
           </Form.Group>
           <Button onClick={uppercase}>Convert Uppercase</Button>
+          <Button className="mx-2" onClick={goHome}>
+            {" "}
+            Go Home
+          </Button>
         </Form>
       </Container>
     </>
