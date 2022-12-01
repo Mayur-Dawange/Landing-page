@@ -5,13 +5,13 @@ import TextUtils2 from "../TextUtils2/TextUtils2";
 
 const About = () => {
   const navigate = useNavigate();
-  const GoAhead = () => {
-    navigate(+1);
+  const GoBack = () => {
+    navigate("/contact");
   };
   return (
     <div>
       <TextUtils2 />
-      <Button onClick={GoAhead}>Go Ahead </Button>
+      <Button onClick={GoBack}>GoBack </Button>
     </div>
   );
 };
