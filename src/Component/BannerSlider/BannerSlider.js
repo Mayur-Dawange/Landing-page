@@ -47,22 +47,16 @@ export default function SimpleSlider() {
     ],
   };
   return (
-    <div className="banner-slider">
+    <div id="banner-slider">
       <Slider {...settings}>
-        <div>
-          <div className="slider-img-box">
-            <img src={banner1} alt="banner1" />
-          </div>
+        <div className="slider-img-box">
+          <img src={banner1} alt="banner1" />
         </div>
-        <div>
-          <div className="slider-img-box">
-            <img src={banner2} alt="banner1" />
-          </div>
+        <div className="slider-img-box">
+          <img src={banner2} alt="banner1" />
         </div>
-        <div>
-          <div className="slider-img-box">
-            <img src={banner3} alt="banner1" />
-          </div>
+        <div className="slider-img-box">
+          <img src={banner3} alt="banner1" />
         </div>
       </Slider>
     </div>

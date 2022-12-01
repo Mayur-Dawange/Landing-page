@@ -1,0 +1,21 @@
+.home_about{
+    padding: 90px 0;
+    .left_about_box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .left_about_box h3{
+        text-transform: uppercase;
+    }
+    .left_about_box img{
+        width: 100%;
+    }
+    .inner_left_box{
+        width: 70%;
+        max-width: 100%;
+    }
+    .inner_left_box p{
+        font-size: 15px;
+    }
+}
