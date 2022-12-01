@@ -10,6 +10,7 @@
     }
     .left_about_box img{
         width: 100%;
+        position: relative;
     }
     .inner_left_box{
         width: 70%;
@@ -18,4 +19,25 @@
     .inner_left_box p{
         font-size: 15px;
     }
+    .inner_right{
+        position: relative;
+        img{
+            width: 100%;
+        }
+
+    }
+    .Width_screen{
+        text-align: center;
+        font-size: 50px;
+        font-weight: 600;
+    }
+}
+.alert{
+    .alert-heading {
+        text-align: center;
+    }
+}
+.screen_btn{
+    text-align: center;
+    padding: 40px 0;
 }
